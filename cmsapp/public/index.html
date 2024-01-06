@@ -6,31 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple CMS App|PHP</title>
+    <link rel="stylesheet" type="text/css" href="../assests/cmsapp.css" />
 </head>
 <body>
+    <h2>A Simple CMS App with PHP </h2> 
+    <div>
     <h2>
         Register
     </h2>
     <form action="process.php" method="POST">
-        <label for="regUsername"> Username : </label>
-        <input type="text" id="regUsername" name="regUsername" required />
+       
+        <input type="text" id="regUsername" name="regUsername" placeholder="Enter your name" required />
         <br/>
-        <label for="regPassword"> Password: </label>
-        <input type="password" id="regPassword" name="regPassword" required />
+        
+        <input type="password" id="regPassword" name="regPassword"  placeholder="Enter your password" required />
         <br/>
-        <button type="submit" name="register"> Register </button>
+        <input type="submit" name="register" /> 
+       
     </form>
+</div>
+    <div>
     <h2> Login </h2>
     <form action="process.php" method="POST">
-        <label for="loginUsername"> Username : </label>
-        <input type="text" id="loginUsername" name="loginUsername" required />
+       
+        <input type="text" id="loginUsername" name="loginUsername" placeholder="Enter your name" required />
         <br/>
-        <label for="loginPassword"> Password: </label>
-        <input type="password" id="loginPassword" name="loginPassword" required />
+        
+        <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter Password"  required />
         <br/>
-        <button type="submit" name="login"> Login </button>
+        <input type="submit" name="login" /> 
+       
         
     </form>
+</div>
     
 </body>
 </html>

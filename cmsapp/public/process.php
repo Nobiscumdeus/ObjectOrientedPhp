@@ -1,8 +1,8 @@
 
 <?php 
 
-require_once('../class/User.php');
-require_once('../class/Article.php');
+require_once('../classes/User.php');
+require_once('../classes/Article.php');
 
 $user=new User();
 $article=new Article();

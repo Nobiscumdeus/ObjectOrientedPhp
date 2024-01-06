@@ -3,7 +3,7 @@
 
 $servername="localhost";
 $username="root";
-$passsword="";
+$password="";
 $dbname="cmsapp";
 
 //Create Connection 

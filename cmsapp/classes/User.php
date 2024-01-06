@@ -6,7 +6,7 @@ require_once('db.php');
 class User extends Database{
     public function register($username,$password)
     {
-        $hashedPaswwrod=passwprd_has($password,PASSWORD_DEFAULT);
+        $hashedPaswwrod=password_hash($password,PASSWORD_DEFAULT);
         $query="INSERT INTO users(username,password) VALUES('$username','$hashedPaswwrod')";
         $this->conn->query($query); //The Connection variable in the database runs the query
     }

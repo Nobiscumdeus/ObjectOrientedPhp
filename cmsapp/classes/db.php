@@ -9,7 +9,7 @@ class Database
     private $host='localhost';
     private $user='root';
     private $password="";
-    private $database="simple_cms";
+    private $database="cmsapp";
 //Protected allows the variable be accessible in the class, but not outside of it.
     protected $conn; 
 
