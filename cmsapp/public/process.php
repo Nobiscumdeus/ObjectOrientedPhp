@@ -1,5 +1,6 @@
 
 <?php 
+start_session(); 
 
 require_once('../classes/User.php');
 require_once('../classes/Article.php');
@@ -27,9 +28,17 @@ elseif(isset($_POST['login']))
     //Perform the User Login 
     if($user->login($loginUsername,$loginPassword))
     {
-        echo "Login Successful";
+        
+       //Get User Details 
+       $userDetails=$user->getUserDetails($loginUsername);
+
+       //Store User Details in a Session 
+       $_SESSION['userdetails']=$userDetails;
+       //Redirect to the article page 
+       header("location:article.php");
     }else{
         echo "Login Failed. Please check your username and password";
+        exit();
     }
 }
 elseif(isset($_POST['createArticle']))

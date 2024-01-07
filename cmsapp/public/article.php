@@ -1,4 +1,14 @@
+<?php
+session_start();
+require_once('../classes/Article.php');
+$article=new Article();
+$articles=$article->getArticles();
+if(isset($_SESSION['userdetails']))
+{
+    $userDetails=$_SESSION['userdetails'];
+}
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,18 +36,23 @@
 
     <!----- Displaying Articles -->
     <h2>Articles</h2>
-    <?php
-    require_once('classes/Article.php');
-    $article=new Article();
-    $articles=$article->getArticles();
+    <?php echo 'Welcome '.$userDetails ?>
+ 
+   
+   <?php
 
     foreach($articles as $article){
-        echo "<h3> {$article['title']}</h3>"
+        /** echo "<h3> {$article['title']}</h3>"
         echo "<h3> {$article['content']}</h3>"
-        echo "<hr>"
+        echo "<hr>"*/
+        echo $article['title'];
+        echo $article['content'];
+        
     }
+   
+    ?>
 
-     ?> 
+ 
 
 </body>
 </html>
